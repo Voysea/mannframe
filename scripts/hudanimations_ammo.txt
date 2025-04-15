@@ -1,0 +1,44 @@
+//# LOW AMMO
+// Animations used for when your ammo drops below the threshold.
+
+event HudLowAmmoPulse
+{	
+	Animate AmmoNoClip					FgColor "clr-ammo-in-clip-low"		Linear 0.0 0.0
+	Animate AmmoInClip					FgColor "clr-ammo-in-clip-low"		Linear 0.0 0.0
+	Animate AmmoInReserve				FgColor "clr-ammo-in-reserve-low"	Linear 0.0 0.0
+	
+	Animate	HudWeaponLowAmmoImage		Alpha "255"						Linear 0.0 0.0
+	Animate	HudWeaponAmmoBG				Alpha "128"						Linear 0.0 0.0
+	
+	RunEvent HudLowAmmoPulseLoop 0.1
+}
+event HudLowAmmoPulseLoop
+{
+	Animate AmmoNoClipShadow			FgColor "clr-ammo-low-blur"			Linear 0.0 0.15
+	Animate AmmoNoClipShadow			FgColor "clr-ammo-low-blur2"		Linear 0.2 0.15
+
+	Animate AmmoInClipShadow			FgColor "clr-ammo-low-blur"			Linear 0.0 0.15
+	Animate AmmoInClipShadow			FgColor "clr-ammo-low-blur2"		Linear 0.2 0.15
+
+	Animate AmmoInReserveShadow			FgColor "clr-ammo-low-blur"			Linear 0.0 0.15
+	Animate AmmoInReserveShadow			FgColor "clr-ammo-low-blur2"		Linear 0.2 0.15
+	
+	RunEvent HudLowAmmoPulse 0.5
+}
+event HudLowAmmoPulseStop
+{
+	StopEvent HudLowAmmoPulse 0.0
+	StopEvent HudLowAmmoPulseLoop 0.0
+	StopPanelAnimations HudWeaponAmmo 0.0
+	
+	Animate	HudWeaponLowAmmoImage		Alpha "0"						Linear 0.0 0.0
+	Animate	HudWeaponAmmoBG				Alpha "255"						Linear 0.0 0.0
+	
+	Animate AmmoNoClip					FgColor "clr-ammo-in-clip"					Linear 0.0 0.0
+	Animate AmmoInClip					FgColor "clr-ammo-in-clip"					Linear 0.0 0.0
+	Animate AmmoInReserve				FgColor "clr-ammo-in-reserve"				Linear 0.0 0.0
+	
+	Animate AmmoNoClipShadow			FgColor "clr-ammo-in-clip-shadow"			Linear 0.0 0.0
+	Animate AmmoInClipShadow			FgColor "clr-ammo-in-clip-shadow"			Linear 0.0 0.0
+	Animate AmmoInReserveShadow			FgColor "clr-ammo-in-reserve-shadow"		Linear 0.0 0.0
+}

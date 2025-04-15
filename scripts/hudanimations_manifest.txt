@@ -1,0 +1,14 @@
+hudanimations_manifest
+{
+	// Custom files
+	
+	"file"		"scripts/hudanimations_fixes.txt"
+	"file"		"scripts/hudanimations_health.txt"
+	"file"		"scripts/hudanimations_ammo.txt"
+	"file"		"scripts/hudanimations_hitmarker.txt"
+	
+	// Base files
+	
+	"file"		"scripts/hudanimations.txt"
+	"file"		"scripts/hudanimations_tf.txt"
+}

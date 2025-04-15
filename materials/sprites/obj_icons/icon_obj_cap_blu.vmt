@@ -1,0 +1,9 @@
+"UnlitGeneric"
+{
+	$baseTexture			"vgui/replay/thumbnails/cp_icons/icon_obj_cap_blu"
+	$detail					"vgui/replay/thumbnails/cp_icons/icon_obj_cap_mask"
+	$detailBlendMode		9
+	$separateDetailUVS		1
+	$translucent			1
+	$vertexColor			1
+}

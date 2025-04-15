@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	$baseTexture				"vgui\replay\thumbnails\cp_icons\icon_obj_cap_mask"
+	$translucent				1
+	$vertexColor				1
+}

@@ -1,0 +1,16 @@
+#base "../base/scripts/tf_weapon_lunchbox.txt"
+
+WeaponData
+{
+	TextureData
+	{
+		"crosshair"
+		{
+			"file"		"vgui/replay/thumbnails/crosshairs/heal"
+			"x"			"0"
+			"y"			"0"
+			"width"		"32"
+			"height"	"32"
+		}
+	}
+}

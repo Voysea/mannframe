@@ -1,0 +1,133 @@
+// Bonus health
+// Animations for when your health goes above your base player health threshold.
+
+event HudHealthBonusPulse
+{	
+	Animate PlayerStatusHealthValueBlur1		Alpha "255"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur2		Alpha "255"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur3		Alpha "255"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur4		Alpha "255"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur5		Alpha "255"							Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValueBlur1		FgColor "clr-health-bonus-blur2"			Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur2		FgColor "clr-health-bonus-blur2"			Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur3		FgColor "clr-health-bonus-blur2"			Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur4		FgColor "clr-health-bonus-blur2"			Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur5		FgColor "clr-health-bonus-blur2"			Linear 0.0 0.0
+	
+	RunEvent HudHealthBonusPulse2 0.2
+}
+event HudHealthBonusPulse2
+{
+	Animate PlayerStatusHealthValue				FgColor "clr-health-normal"				Linear 0.0 0.15
+	Animate PlayerStatusHealthValue				FgColor "clr-health-bonus"				Linear 0.2 0.15
+	Animate PlayerStatusHealthValueID			FgColor "clr-health-normal"				Linear 0.0 0.15
+	Animate PlayerStatusHealthValueID			FgColor "clr-health-bonus"				Linear 0.2 0.15
+	
+	Animate PlayerStatusHealthValueMinMode		FgColor "clr-neutral-100"				Linear 0.0 0.15
+	Animate PlayerStatusHealthValueMinMode		FgColor "clr-neutral-200"				Linear 0.2 0.15
+	
+	Animate PlayerStatusHealthValueBlur1		FgColor "clr-health-bonus-blur"			Linear 0.0 0.15
+	Animate PlayerStatusHealthValueBlur1		FgColor "clr-health-bonus-blur2"		Linear 0.2 0.15
+	Animate PlayerStatusHealthValueBlur2		FgColor "clr-health-bonus-blur"			Linear 0.05 0.15
+	Animate PlayerStatusHealthValueBlur2		FgColor "clr-health-bonus-blur2"		Linear 0.25 0.15
+	Animate PlayerStatusHealthValueBlur3		FgColor "clr-health-bonus-blur"			Linear 0.1 0.15
+	Animate PlayerStatusHealthValueBlur3		FgColor "clr-health-bonus-blur2"		Linear 0.3 0.15
+	Animate PlayerStatusHealthValueBlur4		FgColor "clr-health-bonus-blur"			Linear 0.15 0.15
+	Animate PlayerStatusHealthValueBlur4		FgColor "clr-health-bonus-blur2"		Linear 0.35 0.15
+	Animate PlayerStatusHealthValueBlur5		FgColor "clr-health-bonus-blur"			Linear 0.2 0.15
+	Animate PlayerStatusHealthValueBlur5		FgColor "clr-health-bonus-blur2"		Linear 0.4 0.15
+
+	Animate	PlayerStatusHealthBonusImage 		Alpha "255"							Linear 0.0 0.075
+	Animate	PlayerStatusHealthBonusImage 		Alpha "192"							Linear 0.125 0.075
+
+	RunEvent HudHealthBonusPulseLoop 0.55
+}
+event HudHealthBonusPulseLoop
+{
+	RunEvent HudHealthBonusPulse2 0.0
+}
+event HudHealthBonusPulseStop
+{
+	StopEvent HudHealthBonusPulse 0.0
+	StopEvent HudHealthBonusPulse2 0.0
+	StopEvent HudHealthBonusPulseLoop 0.0
+	StopPanelAnimations HudPlayerHealth 0.0
+	
+	Animate PlayerStatusHealthValue				FgColor "clr-health-normal"				Linear 0.0 0.0
+	Animate PlayerStatusHealthValueID			FgColor "clr-health-normal"				Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValueMinMode		FgColor "clr-neutral-100"				Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValueBlur1		Alpha "0"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur2		Alpha "0"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur3		Alpha "0"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur4		Alpha "0"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur5		Alpha "0"							Linear 0.0 0.0
+}
+
+
+// Low health
+// Animations used for when your health drops below the threshold.
+
+event HudHealthDyingPulse
+{
+	Animate PlayerStatusHealthValue		FgColor "clr-health-hurt"						Linear 0.0 0.0
+	Animate PlayerStatusHealthValueID	FgColor "clr-health-hurt"						Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValueMinMode		FgColor "clr-health-hurt"				Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValueBlur1		Alpha "255"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur2		Alpha "255"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur3		Alpha "255"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur4		Alpha "255"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur5		Alpha "255"							Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValueBlur1		FgColor "clr-health-hurt-blur"			Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur2		FgColor "clr-health-hurt-blur"			Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur3		FgColor "clr-health-hurt-blur"			Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur4		FgColor "clr-health-hurt-blur"			Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur5		FgColor "clr-health-hurt-blur"			Linear 0.0 0.0
+	
+	RunEvent HudHealthDyingPulse2 0.2
+}
+event HudHealthDyingPulse2
+{
+	Animate PlayerStatusHealthValueBlur1		FgColor "clr-health-hurt-blur"			Linear 0.0 0.15
+	Animate PlayerStatusHealthValueBlur1		FgColor "clr-health-hurt-blur2"			Linear 0.2 0.15
+	Animate PlayerStatusHealthValueBlur2		FgColor "clr-health-hurt-blur"			Linear 0.05 0.15
+	Animate PlayerStatusHealthValueBlur2		FgColor "clr-health-hurt-blur2"			Linear 0.25 0.15
+	Animate PlayerStatusHealthValueBlur3		FgColor "clr-health-hurt-blur"			Linear 0.1 0.15
+	Animate PlayerStatusHealthValueBlur3		FgColor "clr-health-hurt-blur2"			Linear 0.3 0.15
+	Animate PlayerStatusHealthValueBlur4		FgColor "clr-health-hurt-blur"			Linear 0.15 0.15
+	Animate PlayerStatusHealthValueBlur4		FgColor "clr-health-hurt-blur2"			Linear 0.35 0.15
+	Animate PlayerStatusHealthValueBlur5		FgColor "clr-health-hurt-blur"			Linear 0.2 0.15
+	Animate PlayerStatusHealthValueBlur5		FgColor "clr-health-hurt-blur2"			Linear 0.4 0.15
+
+	Animate	PlayerStatusHealthBonusImage 		Alpha "255"							Linear 0.0 0.075
+	Animate	PlayerStatusHealthBonusImage 		Alpha "128"							Linear 0.125 0.075
+
+	RunEvent HudHealthDyingPulseLoop 0.55
+}
+event HudHealthDyingPulseLoop
+{
+	RunEvent HudHealthDyingPulse2 0.0
+}
+event HudHealthDyingPulseStop
+{
+	StopEvent HudHealthDyingPulse 0.0
+	StopEvent HudHealthDyingPulse2 0.0
+	StopEvent HudHealthDyingPulseLoop 0.0
+	StopPanelAnimations HudPlayerHealth 0.0
+	
+	Animate PlayerStatusHealthValue				FgColor "clr-health-normal"				Linear 0.0 0.0
+	Animate PlayerStatusHealthValueID			FgColor "clr-health-normal"				Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValueMinMode		FgColor "clr-neutral-100"				Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValueBlur1		Alpha "0"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur2		Alpha "0"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur3		Alpha "0"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur4		Alpha "0"							Linear 0.0 0.0
+	Animate PlayerStatusHealthValueBlur5		Alpha "0"							Linear 0.0 0.0
+}

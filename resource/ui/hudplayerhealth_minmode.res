@@ -1,0 +1,165 @@
+#base "../../base/resource/ui/hudplayerhealth.res"
+
+"Resource/UI/HudPlayerHealth.res"
+{
+	"HudPlayerHealth"
+	{
+		"xpos_minmode"					"c-256"
+		"ypos_minmode"					"c24"
+		"healthDeathWarningColor"		"201 84 84 255"
+	}
+	"PlayerStatusHealthImage"
+	{
+		"xpos_minmode"					"r0"
+		"ypos_minmode"					"r0"
+	}
+	"PlayerStatusHealthImageBG"
+	{
+		"xpos_minmode"					"r0"
+		"ypos_minmode"					"r0"
+	}
+	"PlayerStatusHealthValue"
+	{
+		"xpos_minmode"					"20"
+		"ypos_minmode"					"33"
+		"wide_minmode"					"160"
+		"tall_minmode"					"55"
+		"alpha_minmode"					"0"
+		"font_minmode"					"font-build-48"
+	}
+	"PlayerStatusHealthValueMinMode"
+	{
+		"controlName"					"CExLabel"
+		"fieldName"						"PlayerStatusHealthValueMinMode"
+		"xpos"							"0"
+		"ypos"							"0"
+		"zpos"							"6"
+		"wide_minmode"					"160"
+		"tall_minmode"					"55"
+		"visible"						"1"
+		"enabled"						"1"
+		
+		"pin_to_sibling"				"PlayerStatusHealthValue"
+		"labelText"						"%Health%"
+		"textAlignment"					"center"	
+		"font_minmode"					"font-build-48"
+		"fgColor"						"clr-neutral-100"
+		"alpha"							"0"
+		"alpha_minmode"					"255"
+	}
+	"PlayerStatusHealthValueMinModeShadow"
+	{
+		"controlName"					"CExLabel"
+		"fieldName"						"PlayerStatusHealthValueMinModeShadow"
+		"xpos"							"0"
+		"ypos"							"-1"
+		"zpos"							"6"
+		"wide_minmode"					"160"
+		"tall_minmode"					"55"
+		"visible"						"1"
+		"enabled"						"1"
+		
+		"pin_to_sibling"				"PlayerStatusHealthValueMinMode"
+		"labelText"						"%Health%"
+		"textAlignment"					"center"	
+		"font_minmode"					"font-build-blur-48"
+		"fgColor"						"clr-neutral-900"
+		"alpha"							"0"
+		"alpha_minmode"					"255"
+	}
+	"PlayerStatusHealthValueBlur1"
+	{
+		"controlName"					"CExLabel"
+		"fieldName"						"PlayerStatusHealthValueBlur1"
+		"xpos"							"0"
+		"ypos"							"-1"
+		"zpos"							"5"
+		"wide_minmode"					"160"
+		"tall_minmode"					"55"
+		"visible"						"1"
+		"enabled"						"1"
+		
+		"pin_to_sibling"				"PlayerStatusHealthValue"
+		"labelText"						"%Health%"
+		"textAlignment"					"center"	
+		"font_minmode"							"font-build-blur-48"
+		"fgColor"						"none"
+		"alpha"							"0"
+	}
+	"PlayerStatusHealthValueBlur2"
+	{
+		"controlName"					"CExLabel"
+		"fieldName"						"PlayerStatusHealthValueBlur2"
+		"xpos"							"0"
+		"ypos"							"-1"
+		"zpos"							"5"
+		"wide_minmode"					"160"
+		"tall_minmode"					"55"
+		"visible"						"1"
+		"enabled"						"1"
+		
+		"pin_to_sibling"				"PlayerStatusHealthValue"
+		"labelText"						"%Health%"
+		"textAlignment"					"center"	
+		"font_minmode"							"font-build-blur-48"
+		"fgColor"						"none"
+		"alpha"							"0"
+	}
+	"PlayerStatusHealthValueBlur3"
+	{
+		"controlName"					"CExLabel"
+		"fieldName"						"PlayerStatusHealthValueBlur3"
+		"xpos"							"0"
+		"ypos"							"0"
+		"zpos"							"5"
+		"wide_minmode"					"160"
+		"tall_minmode"					"55"
+		"visible"						"1"
+		"enabled"						"1"
+		
+		"pin_to_sibling"				"PlayerStatusHealthValue"
+		"labelText"						"%Health%"
+		"textAlignment"					"center"	
+		"font_minmode"							"font-build-blur-48"
+		"fgColor"						"none"
+		"alpha"							"0"
+	}
+	"PlayerStatusHealthValueBlur4"
+	{
+		"controlName"					"CExLabel"
+		"fieldName"						"PlayerStatusHealthValueBlur4"
+		"xpos"							"0"
+		"ypos"							"0"
+		"zpos"							"5"
+		"wide_minmode"					"160"
+		"tall_minmode"					"55"
+		"visible"						"1"
+		"enabled"						"1"
+		
+		"pin_to_sibling"				"PlayerStatusHealthValue"
+		"labelText"						"%Health%"
+		"textAlignment"					"center"	
+		"font_minmode"							"font-build-blur-48"
+		"fgColor"						"none"
+		"alpha"							"0"
+	}
+	"PlayerStatusHealthValueBlur5"
+	{
+		"controlName"					"CExLabel"
+		"fieldName"						"PlayerStatusHealthValueBlur5"
+		"xpos"							"0"
+		"ypos"							"-1"
+		"zpos"							"5"
+		"wide_minmode"					"160"
+		"tall_minmode"					"55"
+		"visible"						"1"
+		"enabled"						"1"
+		
+		"pin_to_sibling"				"PlayerStatusHealthValue"
+		"labelText"						"%Health%"
+		"textAlignment"					"center"	
+		"font_minmode"							"font-build-blur-48"
+		"fgColor"						"none"
+		"alpha"							"0"
+	}
+}

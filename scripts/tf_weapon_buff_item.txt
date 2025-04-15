@@ -1,0 +1,16 @@
+#base "../base/scripts/tf_weapon_buff_item.txt"
+
+WeaponData
+{
+	TextureData
+	{
+		"crosshair"
+		{
+			"file"		"vgui/replay/thumbnails/crosshairs/radial"
+			"x"			"0"
+			"y"			"0"
+			"width"		"32"
+			"height"	"32"
+		}
+	}
+}

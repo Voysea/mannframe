@@ -1,0 +1,119 @@
+// Respawn timer
+event TeamStatus_PlayerDead
+{
+	SetVisible DeathPanel  1 0
+	SetVisible SkullPanel  1 0
+	SetVisible respawntime  1 0
+}
+
+event TeamStatus_PlayerAlive
+{
+	SetVisible DeathPanel  0 0.2
+	SetVisible SkullPanel  0 0.2
+	SetVisible respawntime 0 0.2
+}
+
+// Fix stuck animations
+
+event HudSnapShotReminderIn
+{
+	RunEvent DefaultAnimHudSnapShotReminderIn 0.0
+
+    RunEvent HudHealthDyingPulseStop 0.1
+    RunEvent HudHealthBonusPulseStop 0.1
+    RunEvent HudLowAmmoPulseStop 0.1
+    RunEvent HudMedicChargedStop 0.1
+}
+
+// Smoother pulse animation for KOTH timer
+
+event ActiveTimerBGPulse
+{
+	Animate ActiveTimerBG		Alpha "0"			Spline 0.1 0.1
+	Animate ActiveTimerBG		Alpha "255"			Spline 0.3 0.1
+	Animate ActiveTimerBG		Alpha "0"			Spline 0.5 0.1
+	Animate ActiveTimerBG		Alpha "255"			Spline 0.7 0.1
+	Animate ActiveTimerBG		Alpha "0"			Spline 0.9 0.1
+	Animate ActiveTimerBG		Alpha "255"			Spline 1.1 0.1
+}
+
+event ActiveTimerHighlight
+{
+	Animate TimePanelValue		FgColor "clr-neutral-100"		Linear 0.1 0.1
+	Animate TimePanelValue		FgColor "255 255 255 255"		Linear 0.3 0.1
+	Animate TimePanelValue		FgColor "clr-neutral-100"		Linear 0.5 0.1
+	Animate TimePanelValue		FgColor "255 255 255 255"		Linear 0.7 0.1
+	Animate TimePanelValue		FgColor "clr-neutral-100"		Linear 0.9 0.1
+	Animate TimePanelValue		FgColor "255 255 255 255"		Linear 1.1 0.1
+	Animate TimePanelValue		FgColor "clr-neutral-100"		Linear 1.3 0.3
+}
+
+event ActiveTimerDim
+{
+	Animate TimePanelValue		FgColor "clr-neutral-300"		Linear 0.0 0.0
+}
+
+event OvertimeShow
+{
+	Animate OvertimeBG			Alpha "255"						Linear 0.0 0.0
+	Animate OvertimeLabel		Alpha "255"						Linear 0.0 0.0
+	
+	Animate RealTimePanelBG		Alpha "255"						Linear 0.0 0.0
+}
+
+// New item notification initialization
+
+event HasNotificationsBlink
+{
+	Animate Notifications_ShowButtonPanel_SB Alpha 255 Linear 0.0 0.0
+	
+	RunEvent HasNotificationsBlinkLoop 0.0
+}
+event HasNotificationsBlinkLoop
+{
+	Animate Notifications_ShowButtonPanel_SB Alpha 255 Spline 0.0 0.4
+	Animate Notifications_ShowButtonPanel_SB Alpha 0 Spline 0.6 0.6
+	
+	RunEvent HasNotificationsBlinkLoop 1.6
+}
+event HasNotificationsBlinkStop
+{
+	StopEvent HasNotificationsBlink 0.0
+	StopEvent HasNotificationsBlinkLoop 0.0
+	
+	Animate Notifications_ShowButtonPanel_SB Alpha 255 Linear 0.0 0.0 
+}
+
+event NotificationsPresentBlink
+{
+    Animate NotificationsPresentPanel Alpha 255 Linear 0.0 0.0
+    RunEvent NotificationsPresentBlinkLoop 0.0
+}
+event NotificationsPresentBlinkLoop
+{
+    Animate NotificationsPresentPanel Alpha 255 Spline 0.0 0.4
+    Animate NotificationsPresentPanel Alpha 0 Spline 0.4 0.4
+    RunEvent NotificationsPresentBlinkLoop 1.2
+}
+event NotificationsPresentBlinkStop
+{
+    StopEvent NotificationsPresentBlink 0.0
+    StopEvent NotificationsPresentBlinkLoop 0.0
+    Animate NotificationsPresentPanel Alpha 255 Linear 0.0 0.0
+}
+
+// Prevent casual/comp chat positioning from changing
+
+event CompetitiveGame_LowerChatWindow { }
+event HudTournament_MoveChatWindow { }
+
+// Disabled animations
+
+event HudSnapShotReminderIn { }
+event RDPositiveScorePulse { }
+event RDNegativeScorePulse { }
+event HudCartAlarmPulse { }
+event HudReadyPulse { }
+event RespecEarnPulse { }
+event OvertimeLabelPulseRed { }
+event SuddenDeathLabelPulseRed { }

@@ -1,0 +1,11 @@
+"UnlitGeneric"
+{
+	$baseTexture		"vgui\replay\thumbnails\hud\color_panel_red"
+	$translucent		1
+	$alpha				1
+	$vertexAlpha		1
+	$vertexColor		1
+	$no_Fullbright		1
+	$ignoreZ			1
+	%keywords			"tf"
+}

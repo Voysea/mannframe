@@ -1,0 +1,64 @@
+"UnlitGeneric"
+{
+	$baseTexture							"hud\gradient_blue"
+	$detail									"hud\ammo_area_mask"
+	$detailScale							1
+	$detailBlendMode						8
+	$distanceAlpha							1
+	$distanceAlphaFromDetail				1
+	$translucent							1
+	$ignoreZ								1
+	$no_FullBright							1
+	%keywords								"tf"
+	
+	// Soft edges		
+	$softEdges								1
+	$edgeSoftnessStart						0.45
+	$edgeSoftnessEnd						0.30
+	$scaleEdgeSoftnessBasedOnScreenRes		1
+	
+	// Outline
+	$outline								1
+	$outlineColor							"{240 207 78}" // ???
+	$outlineAlpha							1
+	$outlineStart0							0.30
+	$outlineStart1							0.49
+	$outlineEnd0							0.49
+	$outlineEnd1							0.73
+	$scaleOutlineSoftnessBasedOnScreenRes	1
+	
+	// Drop shadow
+	$glow									1
+	$glowColor								"{30 29 26}" // neutral-900
+	$glowAlpha								0.75
+	$glowStart								0
+	$glowEnd								0.5
+	$glowX									0
+	$glowY									0
+	
+	// DirectX 8.1 fallback
+	"<dx90"
+	{
+		$translucent						1
+		$alpha								0
+		$outlineColor						"{240 207 78}" // ???
+		$outlineAlpha						1
+		$outlineStart0						0.30
+		$outlineStart1						0.49
+		$outlineEnd0						0.49
+		$outlineEnd1						0.73
+	}
+	
+	$alpha 1
+	
+	Proxies
+	{
+		Sine
+		{
+			resultVar	$alpha
+			sineperiod	.75
+			sinemin		0
+			sinemax		1
+		}
+	}
+}
